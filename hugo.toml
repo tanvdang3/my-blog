@@ -1,0 +1,29 @@
+baseURL = 'http://tdang.freeshell.org/'
+locale = 'en-us'
+title = 'Mindless Ramblings'
+
+
+
+[build]
+  writeStats = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+[module]
+  [[module.imports]]
+    path = 'github.com/hbstack/meta/recommended'
+[outputs]
+  home = ['HTML', 'Offline', 'RSS', 'SearchIndex', 'WebAppManifest']
+[permalinks]
+  blog = '/blog/:year/:month/:title'
+[taxonomies]
+  authors = 'authors'
+  categories = 'categories'
+  series = 'series'
+  tags = 'tags'
+
