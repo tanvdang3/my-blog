@@ -1,8 +1,10 @@
-baseURL = 'http://tdang.freeshell.org/'
+baseURL = 'https://my-blog-7vu.pages.dev/'
 locale = 'en-us'
 title = 'Mindless Ramblings'
 
-
+[params.author]
+  name = 'Tan Dang'
+  email = 'tdang@sdf.org'
 
 [build]
   writeStats = true
@@ -15,10 +17,32 @@ title = 'Mindless Ramblings'
     lineNumbersInTable = false
     noClasses = false
 [module]
+  # Core blog engine
   [[module.imports]]
-    path = 'github.com/hbstack/meta/recommended'
+    path = 'github.com/hbstack/blog'
+  # Core blog layout enhancements
+  [[module.imports]]
+    path = 'github.com/hbstack/blog/modules/breadcrumb'
+  [[module.imports]]
+    path = 'github.com/hbstack/blog/modules/featured-image'
+  [[module.imports]]
+    path = 'github.com/hbstack/blog/modules/heading-sign'
+  [[module.imports]]
+    path = 'github.com/hbstack/blog/modules/post-nav'
+  [[module.imports]]
+    path = 'github.com/hbstack/blog/modules/related-posts'
+
+  # Diagramming
+  [[module.imports]]
+    path = 'github.com/hbstack/mermaid'
+
+  # UI features
+  [[module.imports]]
+    path = 'github.com/hbstack/header/modules/theme-toggle'
+  [[module.imports]]
+    path = 'github.com/hbstack/syntax-highlighting/styles/gruvbox'
 [outputs]
-  home = ['HTML', 'Offline', 'RSS', 'SearchIndex', 'WebAppManifest']
+  home = ['HTML', 'RSS']
 [permalinks]
   blog = '/blog/:year/:month/:title'
 [taxonomies]
