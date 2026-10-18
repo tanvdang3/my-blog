@@ -7,6 +7,12 @@ title = 'From Alpine Linux'
 
 This post was created on a Alpine Linux VM running in OpenBSD VMM.  I had to make some modes.:wq
 
+
+
+This is after a purge of unneeded npm modules.  Does this show?
+
+### HI
+
 ```mermaid
 graph TD;
 	A[OpenBSD vmm] -->|Hosts| B[Alpine Linux VM];
